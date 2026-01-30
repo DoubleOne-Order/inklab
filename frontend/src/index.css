@@ -1,0 +1,93 @@
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Comme:wght@100..900&display=swap");
+@import "tailwindcss";
+@font-face {
+  font-family: ivymode;
+  src:
+    url("./fonts/ivy-mode-regular.woff2") format("woff2"),
+    url("./fonts/ivy-mode-regular.woff") format("woff");
+}
+@theme {
+  --font-ivymode: ivymode;
+  --font-comme: "Comme", sans-serif;
+  --font-outfit: "Outfit", sans-serif;
+  --primary-color: #0e0a3d;
+  --secondary-color: #bb9847;
+}
+html {
+  font-family: "Comme", sans-serif;
+  scroll-behavior: smooth;
+}
+a,
+button {
+  cursor: pointer;
+}
+
+/* Scroll Up Animation - Moves content upward infinitely with seamless looping */
+@keyframes scrollUp {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(calc(-50% - 32px));
+  }
+}
+
+/* Scroll Down Animation - Moves content downward infinitely with seamless looping */
+@keyframes scrollDown {
+  0% {
+    transform: translateY(calc(-50% - 32px));
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+@layer utilities {
+  /* Container with gradient fade effect - creates illusion of testimonials disappearing at edges */
+  .testimonial-container {
+    mask-image: linear-gradient(
+      to bottom,
+      transparent 0%,
+      black 15%,
+      black 85%,
+      transparent 100%
+    );
+    -webkit-mask-image: linear-gradient(
+      to bottom,
+      transparent 0%,
+      black 15%,
+      black 85%,
+      transparent 100%
+    );
+  }
+
+  @keyframes pulse-gold {
+    0%,
+    100% {
+      box-shadow: 0 0 0 0 hsla(43, 90%, 50%, 0.4);
+    }
+    50% {
+      box-shadow: 0 0 0 10px hsla(43, 90%, 50%, 0);
+    }
+  }
+
+  /* Applies scroll-up animation - used for first and third columns, scrolls upward infinitely with seamless looping */
+  .animate-scroll-up {
+    animation: scrollUp 60s linear infinite;
+  }
+
+  /* Applies scroll-down animation - used for middle column, scrolls downward infinitely with seamless looping */
+  .animate-scroll-down {
+    animation: scrollDown 60s linear infinite;
+  }
+
+  /* Pauses animation on hover to allow users to read testimonials */
+  .hover\:animation-pause:hover {
+    animation-play-state: paused;
+  }
+}
+
+.animate-pulse-gold {
+  animation: pulse-gold 3s infinite;
+}
