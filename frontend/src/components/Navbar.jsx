@@ -4,7 +4,7 @@ import { assets } from '../assets/assets'
 
 const Navbar = () => {
     return (
-        <div className="w-full px-8 py-4 mx-auto">
+        <div className="w-full px-8 py-4 mx-auto sticky top-0 left-0 bg-white z-50">
             <header className="w-full px-5 py-4 flex justify-between items-center">
                 <img src={assets.logo} alt='inlab logo' className='w-16' />
                 <nav className='hidden md:block'>

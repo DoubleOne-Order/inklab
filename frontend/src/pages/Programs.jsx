@@ -1,6 +1,7 @@
 import React from 'react'
 import Title from '../components/Title'
 import { programsContent } from '../assets/assets'
+import { Link } from 'react-router-dom'
 
 const Programs = () => {
     return (
@@ -28,6 +29,16 @@ const Programs = () => {
                             </button>
                         </div>
                     ))}
+                </div>
+            </div>
+            <div className="full bg-(--secondary-color)/5">
+                <div className='max-w-[90%] md:max-w-[80%] mx-auto py-16 flex flex-col items-center gap-2'>
+                    <Title title="Not Sure Where to " title_span="Start?" subtitle="Book a Free Consultation and we'll help you identify the right program for your needs." align="text-center" />
+                    <Link to='/book'>
+                        <button className='w-full md:w-auto bg-(--secondary-color) text-white py-3 px-8 md:px-12 md:py-6 rounded-full hover:bg-(--primary-color) transition-all ease-in-out'>
+                            Book a Free Consultation
+                        </button></Link>
+
                 </div>
             </div>
         </div>

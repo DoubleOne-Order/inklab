@@ -55,9 +55,9 @@ const Home = () => {
 
                     <div className='flex flex-col md:flex-row items-center justify-center gap-8 mb-20'>
                         {approachContent.map((approach) => (
-                            <div key={approach.id} className='flex flex-col flex-wrap items-center justify-center gap-6 bg-gray-50 max-w-80 px-6 py-12 mb-8 rounded-md text-center'>
+                            <div key={approach.id} className='flex flex-col flex-wrap items-center justify-center gap-6 bg-gray-50 px-6 py-12 mb-8 rounded-md text-center'>
                                 <div className='w-15 h-15 bg-(--secondary-color)/40 rounded-sm flex items-center justify-center'>
-                                    <span className='text-3xl icon-book-alert'></span>
+                                    <img src={approach.icon} alt="Approach Icon" className='w-8 h-8' />
                                 </div>
                                 <h3 className='font-medium text-(--primary-color) text-sm md:text-lg'>{approach.title}</h3>
                                 <p className='text-gray-700 text-sm mb-6'>{approach.description}</p>

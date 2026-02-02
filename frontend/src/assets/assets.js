@@ -2,9 +2,13 @@ import hero from './hero.jpg'
 import pathways from './pathways.webp'
 import founder from './founder.jpg'
 import logo from './inlab2.png'
-import bookAlertIcon from './book-alert.png'
-import question from './circle-question-mark.png'
-import target from './target.png'
+import bookAlertIcon from './book-alert.svg'
+import question from './circle-question-mark.svg'
+import target from './target.svg'
+import bookOpen from './book-open.svg'
+import users from './users.svg'
+import briefcase from './briefcase.svg'
+import heart from './heart.svg'
 
 export const assets = {
   hero,
@@ -13,7 +17,11 @@ export const assets = {
   logo,
   bookAlertIcon,
   question,
-  target
+  target,
+  bookOpen,
+  users,
+  briefcase,
+  heart
 }
 
 export const challengeContent = [
@@ -40,21 +48,25 @@ export const challengeContent = [
 export const approachContent = [
   {
     id: 1,
+    icon: bookOpen,
     title: "Learning & Skills Development",
     description: "Skills-based workshops and training that go beyond textbooks—practical knowledge for the real world"
   },
   {
     id: 2,
+    icon: users,
     title: "Mentorship & Coaching",
     description: "One-on-one and group mentoring sessions with experienced professionals who understand your journey."
   },
   {
     id: 3,
+    icon: briefcase,
     title: "Career Enablement & Readiness",
     description: "CV optimization, interview prep, and career mapping to help you land opportunities that match your potential."
   },
   {
     id: 4,
+    icon: heart,
     title: "Wellness & Personal Development",
     description: "Mental health support and life skills that build resilience, balance, and sustainable success."
   }
@@ -189,5 +201,66 @@ export const programsContent = [
       'Staff training',
       'Long-term partnerships'
     ]
+  }
+]
+
+export const journeySteps = [
+  {
+    id: 1,
+    title: "Discovery",
+    description: "Understand your strengths, values, and what drives you. We explore your background, interests, and aspirations."
+  },  
+  {
+    id: 2,
+    title: "Exploration",
+    description: "Research and explore potential paths aligned with your discoveries. We map out options and opportunities."
+  },  
+  {
+    id: 3,
+    title: "Clarity",
+    description: "Narrow down your options and gain clarity on your direction. Make informed decisions about your future."
+  },
+  {
+    id: 4,
+    title: "Planning",
+    description: "Create a strategic plan to achieve your career goals. We help you set milestones and develop actionable steps." 
+  },  
+  {
+    id: 5,
+    title: "Launch",
+    description: "Take the first steps toward your chosen path with confidence and support. We guide you through implementation and early success ."
+  }
+]
+
+export const gainPoints = [
+  {
+    id: 1,
+    title: "Tangible Outcomes",
+    point: "Clear understanding of personal strengths and career interests."
+  },
+  {
+    id: 2,
+    title: "Strategic Planning",  
+    point: "A well-defined career path with actionable steps."
+  },
+  {
+    id: 3,
+    title: "Increased Confidence",
+    point: "Enhanced confidence in making educational and career decisions."
+  },
+  {
+    id: 4,
+    title: "Practical Skills",
+    point: "Practical skills for job searching, interviews, and professional growth."
+  },
+  {
+    id: 5,
+    title: "Support Network",
+    point: "Access to a supportive network of mentors and peers."
+  },
+  {
+    id: 6,
+    title: "Mental Resilience",
+    point: "Improved mental resilience and personal development strategies."
   }
 ]
